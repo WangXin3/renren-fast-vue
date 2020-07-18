@@ -15,40 +15,16 @@
         <el-input v-model="dataForm.name" placeholder="品牌名"></el-input>
       </el-form-item>
       <el-form-item label="品牌logo地址" prop="logo">
-        <!-- <el-upload
-          class="upload-demo"
-          action="https://jsonplaceholder.typicode.com/posts/"
-          :on-preview="handlePreview"
-          :on-remove="handleRemove"
-          :before-remove="beforeRemove"
-          multiple
-          :limit="3"
-          :on-exceed="handleExceed"
-          :file-list="fileList"
-        >
-          <el-button size="small" type="primary">点击上传</el-button>
-          <div slot="tip" class="el-upload__tip">
-            只能上传jpg/png文件，且不超过500kb
-          </div>
-        </el-upload> -->
-        <el-input v-model="dataForm.logo" placeholder="品牌logo地址"></el-input>
+        <single-upload v-model="dataForm.logo"></single-upload>
       </el-form-item>
       <el-form-item label="介绍" prop="descript">
         <el-input v-model="dataForm.descript" placeholder="介绍"></el-input>
       </el-form-item>
       <el-form-item label="显示状态" prop="showStatus">
-        <el-switch
-          v-model="dataForm.showStatus"
-          active-color="#13ce66"
-          inactive-color="#ff4949"
-        >
-        </el-switch>
+        <el-switch v-model="dataForm.showStatus" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
       </el-form-item>
       <el-form-item label="检索首字母" prop="firstLetter">
-        <el-input
-          v-model="dataForm.firstLetter"
-          placeholder="检索首字母"
-        ></el-input>
+        <el-input v-model="dataForm.firstLetter" placeholder="检索首字母"></el-input>
       </el-form-item>
       <el-form-item label="排序" prop="sort">
         <el-input v-model="dataForm.sort" placeholder="排序"></el-input>
@@ -62,7 +38,9 @@
 </template>
 
 <script>
+import singleUpload from "@/components/upload/singleUpload";
 export default {
+  components: { singleUpload },
   data() {
     return {
       visible: false,
