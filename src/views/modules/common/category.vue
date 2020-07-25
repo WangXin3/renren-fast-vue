@@ -8,7 +8,7 @@
       ref="menuTree"
       @node-click="nodeclick"
       :filter-node-method="filterNode"
-      :highlight-current="true"
+      :highlight-current = "true"
     ></el-tree>
   </div>
 </template>
@@ -78,4 +78,5 @@ export default {
 };
 </script>
 <style scoped>
+
 </style>
