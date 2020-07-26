@@ -17,9 +17,9 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item label="值类型" prop="attrType">
+      <el-form-item label="值类型" prop="valueType">
         <el-switch
-          v-model="dataForm.attrType"
+          v-model="dataForm.valueType"
           active-text="允许多个值"
           inactive-text="只能单个值"
           active-color="#13ce66"
@@ -106,7 +106,8 @@ export default {
         enable: 1,
         catelogId: "",
         attrGroupId: "",
-        showDesc: 0
+        showDesc: 0,
+        valueType: 1
       },
       catelogPath: [],
       attrGroups: [],
